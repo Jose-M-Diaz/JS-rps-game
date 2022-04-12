@@ -20,5 +20,11 @@ const gameRound = (playerSelection, computerSelection) => {
     return "You Lose!, Scissors beats Paper";
   } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
     return "You Lose!, Rock beats Scissors";
+  } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+    return "You Win!, Rock beats Scissors";
+  } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+    return "You Win!, Paper beats Rock";
+  } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+    return "You Win!, Scissors beats Paper";
   }
 };
