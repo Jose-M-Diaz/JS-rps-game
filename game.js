@@ -27,10 +27,11 @@ const playerChoice = () => {
 };
 
 let playerSelection = playerChoice();
+// console.log(playerSelection);
 let computerSelection = computerPlay();
+// console.log(computerSelection);
 
 const gameRound = (playerSelection, computerSelection) => {
-  console.log(playerSelection);
   if (playerSelection == "rock" && computerSelection == "Paper") {
     return "You Lose!, Paper beats Rock";
   } else if (playerSelection == "paper" && computerSelection == "Scissors") {
@@ -45,9 +46,7 @@ const gameRound = (playerSelection, computerSelection) => {
     return "You Win!, Scissors beats Paper";
   }
 };
-const player = "rock";
-const comp = computerPlay();
-gameRound(playerSelection, computerSelection);
+console.log(gameRound(playerSelection, computerSelection));
 
 const game = () => {
   for (let i = 0; i <= 5; i++) {}
