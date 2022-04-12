@@ -4,11 +4,11 @@ const computerPlay = () => {
   const randomNumber = Math.floor(Math.random() * 3);
 
   if (randomNumber === 0) {
-    return "Rock";
+    return "rock";
   } else if (randomNumber === 1) {
-    return "Paper";
+    return "paper";
   } else if (randomNumber === 2) {
-    return "Scissors";
+    return "scissors";
   }
 };
 
@@ -26,28 +26,37 @@ const playerChoice = () => {
   }
 };
 
-let playerSelection = playerChoice();
+// let playerSelection = playerChoice();
 // console.log(playerSelection);
-let computerSelection = computerPlay();
+// let computerSelection = computerPlay();
 // console.log(computerSelection);
 
 const gameRound = (playerSelection, computerSelection) => {
-  if (playerSelection == "rock" && computerSelection == "Paper") {
+  if (playerSelection == "rock" && computerSelection == "paper") {
     return "You Lose!, Paper beats Rock";
-  } else if (playerSelection == "paper" && computerSelection == "Scissors") {
+  } else if (playerSelection == "paper" && computerSelection == "scissors") {
     return "You Lose!, Scissors beats Paper";
-  } else if (playerSelection == "scissors" && computerSelection == "Rock") {
+  } else if (playerSelection == "scissors" && computerSelection == "rock") {
     return "You Lose!, Rock beats Scissors";
-  } else if (playerSelection == "rock" && computerSelection == "Scissors") {
+  } else if (playerSelection == "rock" && computerSelection == "scissors") {
     return "You Win!, Rock beats Scissors";
-  } else if (playerSelection == "paper" && computerSelection == "Rock") {
+  } else if (playerSelection == "paper" && computerSelection == "rock") {
     return "You Win!, Paper beats Rock";
-  } else if (playerSelection == "scissors" && computerSelection == "Paper") {
+  } else if (playerSelection == "scissors" && computerSelection == "paper") {
     return "You Win!, Scissors beats Paper";
+  } else {
+    return "TIE!!";
   }
 };
-console.log(gameRound(playerSelection, computerSelection));
+// console.log(gameRound(playerSelection, computerSelection));
 
 const game = () => {
-  for (let i = 0; i <= 5; i++) {}
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = playerChoice();
+    console.log(playerSelection);
+    let computerSelection = computerPlay();
+    console.log(computerSelection);
+    console.log(gameRound(playerSelection, computerSelection));
+  }
 };
+game();
